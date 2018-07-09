@@ -12,7 +12,7 @@ bot.on("ready", () => {
 });
 
 bot.on("guildCreate", guild => {
-    console.log(`I've joined the guild ${guild.name} (${guild.id}), owned by ${guild.owner.user.username} (${guild.owner.user.id}).`);
+    console.log(`MeaxisBot ajouté dans ${guild.name} (${guild.id}), Propriétaire: ${guild.owner.user.username} (${guild.owner.user.id}).`);
 });
 
 bot.on("message", async message => { 
@@ -36,7 +36,7 @@ bot.on("message", async message => {
         args.shift(); // delete the first word from the args
 
         
-        if (cmd === 'hi' || cmd === 'hello') { // the first command [I don't like ping > pong]
+        if (cmd === 'bonjour' || cmd === 'Salut !') { // the first command [I don't like ping > pong]
             message.channel.send(`Hi there ${message.author.toString()}`);
             return; 
         }
@@ -52,13 +52,13 @@ bot.on("message", async message => {
         }
 
         else { // if the command doesn't match anything you can say something or just ignore it
-            message.channel.send(`I don't know what command that is.`);
+            message.channel.send(`Commande inconnue, merci de réesayer.`);
             return;
         }
         
     } else if (message.content.indexOf("<@"+bot.user.id) === 0 || message.content.indexOf("<@!"+bot.user.id) === 0) { // Catch @Mentions
 
-        return message.channel.send(`Use \`${config.prefix}\` to interact with me.`); //help people learn your prefix
+        return message.channel.send(`Prefix : \`${config.prefix}\`. Version 0.1`); //help people learn your prefix
     }
     return;
 });
