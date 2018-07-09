@@ -7,7 +7,7 @@ const bot = new Discord.Client({
 });
 
 bot.on("ready", () => {
-    bot.user.setGame('Awesome Fun Game'); //you can set a default game
+    bot.user.setGame('MeaxisBot V1/Oofage'); //you can set a default game
     console.log(`Bot is online!\n${bot.users.size} users, in ${bot.guilds.size} servers connected.`);
 });
 
