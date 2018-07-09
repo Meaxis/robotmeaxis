@@ -1,0 +1,26 @@
+{
+  "name": "MeaxisBot",
+  "version": "0.1",
+  "description": "Bot de Meaxis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "Tony (zfbTony)",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zfbTony/Discord-Bot-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zfbTony/Discord-Bot-Template/issues"
+  },
+  "homepage": "https://eaxis.fr"
+}
