@@ -36,8 +36,8 @@ bot.on("message", async message => {
         args.shift(); // delete the first word from the args
 
         
-        if (cmd === 'bonjour' || cmd === 'Salut !') { // the first command [I don't like ping > pong]
-            message.channel.send(`Hi there ${message.author.toString()}`);
+        if (cmd === 'bonjour' || cmd === 'salut') { // the first command [I don't like ping > pong]
+            message.channel.send(`Bonjour ${message.author.toString()}`);
             return; 
         }
 
@@ -62,6 +62,14 @@ bot.on("message", async message => {
     }
     return;
 });
+
+        if (cmd === 'cmds' || cmd === 'help') { // the first command [I don't like ping > pong]
+            message.channel.send(`Voici la liste des commandes, ${message.author.toString()}:
+!salut - !bonjour / Le bot vous dit Bonjour !
+!ping / Tester la réponse du bot
+!cmds - !help / Voir les commandes.`);
+            return; 
+        }
 
 function evalCmd(message, code) {
     if(message.author.id !== config.owner) return;
